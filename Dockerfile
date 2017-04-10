@@ -11,7 +11,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN npm install -g node-gyp
 
 # Install Supervisor
-RUN apt-get install -y supervisor
+RUN apt-get update && \
+apt-get install -y supervisor
 
 # Copy supervisor config
 ADD conf/supervisord.conf /etc/supervisord.conf
