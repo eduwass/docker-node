@@ -24,4 +24,4 @@ ADD scripts/start.sh /usr/bin/start.sh
 EXPOSE 80
 
 # run start script
-CMD ["/bin/bash", "/usr/bin/start.sh"]
+CMD ["/bin/bash", "/usr/bin/supervisord -n -c /etc/supervisord.conf"]
